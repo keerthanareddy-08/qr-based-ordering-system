@@ -26,20 +26,33 @@ body {
 
 .hero-content {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 40%; /* moved slightly up from 50% */
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
 }
 
 .hero-content h1 {
-  font-size: 60px;
+  font-size: 80px; /* increased */
   color: gold;
+  letter-spacing: 3px;
 }
 
 .hero-content p {
   font-size: 22px;
+}
+
+.tagline {
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 18px;
+  max-width: 700px;  /* increased width */
+  line-height: 1.8;  /* more spacing between lines */
 }
 
 /* OFFERS */
