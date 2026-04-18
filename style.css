@@ -53,11 +53,13 @@ body {
 }
 
 .offer-card {
-  background: #f5f5f5;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent */
+  color: white;
   margin: 10px;
   padding: 15px;
   border-radius: 10px;
 }
+
 
 /* MENU */
 .menu {
@@ -76,12 +78,13 @@ body {
 }
 
 .item {
-  background: white;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
   width: 180px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #000;
 }
 
 .item img {
@@ -145,4 +148,13 @@ body {
 .menu * {
   position: relative;
   z-index: 1;
+}
+
+.offers h2,
+.menu h2,
+.menu h3,
+.menu h4,
+.menu p,
+.menu span {
+  color: white;
 }
