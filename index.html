@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Golden Spoon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <img src="" class="bg-image">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Golden Spoon</h1>
+    <p>Dine in the beautiful unknown</p>
+  </div>
+</section>
+
+<!-- OFFERS SECTION -->
+<section class="offers">
+  <h2>✨ Exclusive Offers</h2>
+
+  <div class="offer-card">Buy 2 Main Courses, Get 1 Starter Free</div>
+  <div class="offer-card">Flat 20% Off on Orders above ₹999</div>
+  <div class="offer-card">🎂 Spend ₹1500 on your birthday & get FREE cake</div>
+
+  <h2>🔥 Today's Hot Deals</h2>
+  <div class="offer-card">Paneer Tikka @ ₹120</div>
+  <div class="offer-card">Chicken Biryani Combo @ ₹199</div>
+</section>
+
+<!-- MENU SECTION -->
+<section class="menu">
+  <h2>🍽️ Menu</h2>
+
+  <!-- STARTERS -->
+  <h3>Starters</h3>
+
+  <h4>Veg</h4>
+  <div class="menu-grid">
+    <div class="item">
+      <img src="">
+      <p>Paneer Tikka</p>
+      <span>₹180</span>
+      <button onclick="addToCart('Paneer Tikka',180)">Add to Cart</button>
+    </div>
+
+    <div class="item">
+      <img src="">
+      <p>Veg Manchurian</p>
+      <span>₹150</span>
+      <button onclick="addToCart('Veg Manchurian',150)">Add to Cart</button>
+    </div>
+  </div>
+
+  <h4>Non-Veg</h4>
+  <div class="menu-grid">
+    <div class="item">
+      <img src="">
+      <p>Chicken Tikka</p>
+      <span>₹220</span>
+      <button onclick="addToCart('Chicken Tikka',220)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- MAIN COURSE -->
+  <h3>Main Course</h3>
+
+  <h4>Veg</h4>
+  <div class="menu-grid">
+    <div class="item">
+      <img src="">
+      <p>Paneer Butter Masala</p>
+      <span>₹200</span>
+      <button onclick="addToCart('Paneer Butter Masala',200)">Add to Cart</button>
+    </div>
+  </div>
+
+  <h4>Non-Veg</h4>
+  <div class="menu-grid">
+    <div class="item">
+      <img src="">
+      <p>Chicken Biryani</p>
+      <span>₹220</span>
+      <button onclick="addToCart('Chicken Biryani',220)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <h3>Desserts</h3>
+  <div class="menu-grid">
+    <div class="item">
+      <img src="">
+      <p>Ice Cream</p>
+      <span>₹100</span>
+      <button onclick="addToCart('Ice Cream',100)">Add to Cart</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- ORDER NOW BUTTON -->
+<div class="order-btn-container">
+  <button onclick="showCart()">Order Now</button>
+</div>
+
+<!-- CART SECTION -->
+<section class="cart" id="cartSection">
+  <h2>Your Order</h2>
+
+  <div id="cartItems"></div>
+
+  <h3 id="total">Total: ₹0</h3>
+
+  <input type="number" id="tableNumber" placeholder="Enter Table Number">
+
+  <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  color: gold;
+}
+
+.hero-content p {
+  font-size: 22px;
+}
+
+/* OFFERS */
+.offers {
+  padding: 40px;
+  text-align: center;
+}
+
+.offer-card {
+  background: #f5f5f5;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* MENU */
+.menu {
+  padding: 40px;
+  text-align: center;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  background: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 180px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.item img {
+  width: 100%;
+  height: 120px;
+  background: #ddd;
+}
+
+.item button {
+  margin-top: 10px;
+  padding: 8px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+}
+
+/* ORDER BUTTON */
+.order-btn-container {
+  text-align: center;
+  margin: 40px;
+}
+
+.order-btn-container button {
+  padding: 15px 30px;
+  background: gold;
+  border: none;
+  font-size: 18px;
+}
+
+/* CART */
+.cart {
+  display: none;
+  text-align: center;
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+#cartItems div {
+  margin: 10px;
+}
+
+.remove {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
