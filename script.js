@@ -1,11 +1,29 @@
 let cart = [];
 
+function showToast(message, type = "info") {
+
+  const toast = document.getElementById("toast");
+
+  toast.innerHTML = message;
+  toast.className = "toast show " + type;
+
+  setTimeout(() => {
+    toast.className = "toast";
+  }, 2500);
+
+}
+
 function addToCart(name, price) {
   cart.push({name, price});
-  alert(name + " added to cart");
+  showToast("✅ " + name + " added to cart", "success");
 }
 
 function showCart() {
+  if (cart.length === 0) {
+    showToast("🛒 Your cart is empty", "error");
+    return;
+  }
+
   document.getElementById("cartSection").style.display = "block";
   displayCart();
   window.scrollTo(0, document.body.scrollHeight);
@@ -38,14 +56,27 @@ function removeItem(index) {
 }
 
 function placeOrder() {
-  let table = document.getElementById("tableNumber").value;
-
-  if(table === "") {
-    alert("Please enter table number");
+  if (cart.length === 0) {
+    showToast("🛒 Your cart is empty", "error");    
     return;
   }
 
-  alert("Order placed successfully for Table " + table);
+  let table = document.getElementById("tableNumber").value;
+
+  if (table === "") {
+    showToast("⚠ Please enter your table number", "error");
+    return;
+  }
+
+  showToast("🎉 Order placed successfully! Table " + table, "success");  
+
+  cart = [];
+  displayCart();
+  document.getElementById("cartSection").style.display = "none";
+  document.getElementById("tableNumber").value = "";
+}
+
+  showToast("🎉 Order placed successfully! Table " + table, "success");
   cart = [];
   displayCart();
 }
