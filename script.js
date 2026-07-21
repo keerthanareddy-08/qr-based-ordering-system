@@ -57,7 +57,7 @@ function removeItem(index) {
 
 function placeOrder() {
   if (cart.length === 0) {
-    showToast("🛒 Your cart is empty", "error");    
+    showToast("🛒 Your cart is empty", "error");
     return;
   }
 
@@ -68,7 +68,7 @@ function placeOrder() {
     return;
   }
 
-  showToast("🎉 Order placed successfully! Table " + table, "success");  
+  showToast("🎉 Order placed successfully! Table " + table, "success");
 
   cart = [];
   displayCart();
@@ -76,7 +76,4 @@ function placeOrder() {
   document.getElementById("tableNumber").value = "";
 }
 
-  showToast("🎉 Order placed successfully! Table " + table, "success");
-  cart = [];
-  displayCart();
 }
