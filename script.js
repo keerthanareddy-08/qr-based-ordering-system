@@ -74,6 +74,5 @@ function placeOrder() {
   displayCart();
   document.getElementById("cartSection").style.display = "none";
   document.getElementById("tableNumber").value = "";
-}
 
 }
